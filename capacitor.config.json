@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Battlegounds Companion",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

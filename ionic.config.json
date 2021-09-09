@@ -1,0 +1,8 @@
+{
+  "name": "Battlegounds Companion",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "0da1b719"
+}
