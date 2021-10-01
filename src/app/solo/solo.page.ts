@@ -8,8 +8,16 @@ import { Component, OnInit } from '@angular/core';
 export class SoloPage implements OnInit {
 
   stats = JSON.parse(localStorage.getItem('data'))?.data?.attributes?.gameModeStats;
-  statsSoloFFP = this.stats['solo-fpp'];
-  statsSoloTTP = this.stats?.solo;
+  public isToggled: boolean;
+
+  statsSoloFPP = this.stats['solo-fpp'];
+  statsSoloTPP = this.stats?.solo;
+
+  statsDuoFPP = this.stats['duo-fpp'];
+  statsDuoTPP = this.stats?.duo;
+
+  statsSquadFPP = this.stats['squad-fpp'];
+  statsSquadTPP = this.stats?.squad;
 
   constructor() { }
 

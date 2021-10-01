@@ -6,16 +6,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    // { title: 'Inbox', url: '/folder/Inbox', icon: 'mail' },
-    // { title: 'Outbox', url: '/folder/Outbox', icon: 'paper-plane' },
-    // { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
-    // { title: 'Archived', url: '/folder/Archived', icon: 'archive' },
-    // { title: 'Trash', url: '/folder/Trash', icon: 'trash' },
-    // { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
-
     {
       title: 'Lifetime',
       url: '/lifetime',
+      icon: 'mail'
+    },
+    {
+      title: 'Season',
+      url: '/solo',
       icon: 'mail'
     },
     {
@@ -24,25 +22,40 @@ export class AppComponent {
       icon: 'mail'
     },
     {
-      title: 'Solo',
-      url: '/solo',
+      title: 'Assault Rifles',
+      url: '/arstats',
+      icon: 'pulse'
+    },
+    {
+      title: 'DMR Rifles',
+      url: '/dmrstats',
       icon: 'mail'
     },
     {
-      title: 'Duo',
-      url: '/duo',
+      title: 'LMG Rifles',
+      url: '/lmgstats',
       icon: 'mail'
     },
     {
-      title: 'Squad',
-      url: '/squad',
+      title: 'Pistols',
+      url: '/pistolstats',
       icon: 'mail'
     },
     {
-      title: 'Miscellaneous',
-      url: '/misc',
+      title: 'Shotguns',
+      url: '/shoutgunstats',
       icon: 'mail'
     },
+    {
+      title: 'SMG',
+      url: '/smgstats',
+      icon: 'mail'
+    },
+    {
+      title: 'Sniper Rifles',
+      url: '/sniperstats',
+      icon: 'star'
+    }
   ];
   constructor() {}
 }

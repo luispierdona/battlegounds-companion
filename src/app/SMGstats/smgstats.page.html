@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>{{'Submachine Guns list'}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let item of stats;">
+        <ion-card>
+          <img [src]="item.img" />
+          <ion-card-header>
+            <ion-card-subtitle>{{ 'SMG Rifle '}}</ion-card-subtitle>
+            <ion-card-title>{{ item.weapon }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list>
+              <ion-item>
+                <ion-label>
+                  <p>{{ 'Base Damage ' }}</p>
+                  <span>{{ item.baseDamage }}</span>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <p>{{ 'Fire rate ' }}</p>
+                  <span>{{ item.fireRate }}</span>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <p>{{ 'Reload Duration ' }}</p>
+                  <span>{{ item.reloadDuration }}</span>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <p>{{ 'Spawn Rate ' }}</p>
+                  <span>{{ item.spawnRate }}</span>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <p>{{ 'Average Accuracy ' }}</p>
+                  <span>{{ item.avgAccuracy }}</span>
+                </ion-label>
+              </ion-item>
+              <ion-item>
+                <ion-label>
+                  <p>{{ 'Average KillDistance ' }}</p>
+                  <span>{{ item.avgKillDistance }}</span>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
