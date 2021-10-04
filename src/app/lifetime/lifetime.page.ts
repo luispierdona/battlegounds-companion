@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lifetime',
@@ -16,12 +17,17 @@ export class LifetimePage implements OnInit {
   statsSquadTTP = this.stats?.squad;
 
   public isToggled: boolean;
-  constructor() {
+  constructor(private router: Router) {
 
   }
 
   ngOnInit() {
 
+  }
+
+  changeUser() {
+    localStorage.setItem('usrId', null);
+    this.router.navigate(['login']);
   }
 
 }

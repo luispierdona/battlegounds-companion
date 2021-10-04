@@ -1,46 +1,25 @@
-<!--<ion-header>-->
-  <!--<ion-toolbar>-->
-    <!--<ion-title>login</ion-title>-->
-  <!--</ion-toolbar>-->
-<!--</ion-header>-->
-
-<ion-content padding >
-<div class="test">
-
-  <ion-card>
-    <!--<ion-card-header>-->
-    <!--<ion-card-title>Fortnite Stats</ion-card-title>-->
-    <!--</ion-card-header>-->
-
-    <ion-card-content>
-      <p> <b style="color: white;"> Write your name exactly as it is in the game </b> </p>
-      <ion-list>
-        <ion-item>
-          <ion-input placeholder="Username" ></ion-input>
-        </ion-item>
-        <ion-item>
+<ion-content padding>
+  <div class="backgroundLogin">
+    <ion-card>
+      <ion-card-content>
+        <p> <b style="color: white;"> Write your name exactly as it is in the game </b> </p>
+        <ion-list>
+          <ion-item>
+            <ion-input placeholder="Username" [(ngModel)]="username"></ion-input>
+          </ion-item>
+          <ion-item>
             <ion-label>Server</ion-label>
-                <ion-select placeholder="Select One">
-                    <ion-select-option value="pc-na">PC-NA</ion-select-option>
-                    <ion-select-option value="pc-sa">PC-SA</ion-select-option>
-                    <ion-select-option value="pc-eu">PC-EU</ion-select-option>
-                    <ion-select-option value="pc-ru">PC-RU</ion-select-option>
-                    <ion-select-option value="pc-jp">PC-JP</ion-select-option>
-                    <ion-select-option value="pc-krjp">PC-KRPJ</ion-select-option>
-                    <ion-select-option value="pc-oc">PC-OC</ion-select-option>
-                    <ion-select-option value="pc-sea">PC-SEA</ion-select-option>
-                    <ion-select-option value="pc-as">PC-AS</ion-select-option>
+            <ion-select placeholder="Select One" [(ngModel)]="sv">
+              <ion-select-option value="steam">steam</ion-select-option>
+              <ion-select-option value="kakao">kakao</ion-select-option>
+              <ion-select-option value="psn">psn</ion-select-option>
+              <ion-select-option value="stadia">stadia</ion-select-option>
+              <ion-select-option value="xbox">xbox</ion-select-option>
             </ion-select>
-        </ion-item>
-      </ion-list>
-      <ion-button color="primary" (click)="login()" expand="full">Find Me!</ion-button>
-    </ion-card-content>
-  </ion-card>
-
-    <!--<div align="center" style="text-align: center; bottom: 1%;">-->
-        <!--<ion-label>-->
-            <!--Stats and Maps! Created by Saitamapps-->
-        <!--</ion-label>-->
-    <!--</div>-->
-</div>
+          </ion-item>
+        </ion-list>
+        <ion-button color="primary" (click)="login()" expand="full">Find Me!</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>

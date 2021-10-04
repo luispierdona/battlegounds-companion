@@ -9,17 +9,17 @@ export class AppComponent {
     {
       title: 'Lifetime',
       url: '/lifetime',
-      icon: 'mail'
+      icon: 'person'
     },
     {
       title: 'Season',
       url: '/solo',
-      icon: 'mail'
+      icon: 'ribbon'
     },
     {
       title: 'Maps',
       url: '/maps',
-      icon: 'mail'
+      icon: 'map'
     },
     {
       title: 'Assault Rifles',
@@ -29,32 +29,32 @@ export class AppComponent {
     {
       title: 'DMR Rifles',
       url: '/dmrstats',
-      icon: 'mail'
+      icon: 'pulse'
     },
     {
       title: 'LMG Rifles',
       url: '/lmgstats',
-      icon: 'mail'
+      icon: 'pulse'
     },
     {
       title: 'Pistols',
       url: '/pistolstats',
-      icon: 'mail'
+      icon: 'pulse'
     },
     {
       title: 'Shotguns',
       url: '/shoutgunstats',
-      icon: 'mail'
+      icon: 'pulse'
     },
     {
       title: 'SMG',
       url: '/smgstats',
-      icon: 'mail'
+      icon: 'pulse'
     },
     {
       title: 'Sniper Rifles',
       url: '/sniperstats',
-      icon: 'star'
+      icon: 'pulse'
     }
   ];
   constructor() {}

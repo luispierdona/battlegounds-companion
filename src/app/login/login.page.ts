@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
 })
 export class LoginPage implements OnInit {
 
-  userId: string;
+  sv: string;
+  username: string;
 
   constructor(
     private loadingController: LoadingController,
@@ -27,7 +28,7 @@ export class LoginPage implements OnInit {
     try {
       this.presentLoading();
       // USER ID
-      const userID = await this.playerService.getUserID('ToyLevantable', 'pc-sa');
+      const userID = await this.playerService.getUserID(this.username, this.sv);
       // this.userId = userIDProm?.data[0]?.id;
       // console.log('🚀 userId', this.userId);
       console.log(userID);
@@ -39,7 +40,7 @@ export class LoginPage implements OnInit {
       localStorage.setItem('lifestimeStats', JSON.stringify(lifetimeStats));
 
       // SEASONS
-      const seasons = await this.playerService.getAllSeasons('pc-sa');
+      const seasons = await this.playerService.getAllSeasons(this.sv);
       console.log(seasons);
       localStorage.setItem('allSeasons', JSON.stringify(seasons));
       const currentSeasonArray: any[] = seasons?.data;
@@ -48,7 +49,7 @@ export class LoginPage implements OnInit {
       localStorage.setItem('lastSeason', JSON.stringify(currentSeason[0]?.id));
 
       // PLAYER DATA
-      const playerData = await this.playerService.getData(userID?.data[0]?.id, 'pc-sa', currentSeason[0]?.id);
+      const playerData = await this.playerService.getData(userID?.data[0]?.id, this.sv, currentSeason[0]?.id);
       console.log(playerData);
       localStorage.setItem('data', JSON.stringify(playerData));
 
@@ -57,6 +58,7 @@ export class LoginPage implements OnInit {
 
     } catch (error) {
       console.log(error);
+      this.notFoundUser();
       this.closeLoading();
     }
 

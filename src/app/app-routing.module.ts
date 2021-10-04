@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './_guards';
 
 const routes: Routes = [
 
@@ -14,11 +15,13 @@ const routes: Routes = [
   },
   {
     path: 'lifetime',
-    loadChildren: () => import('./lifetime/lifetime.module').then( m => m.LifetimePageModule)
+    loadChildren: () => import('./lifetime/lifetime.module').then( m => m.LifetimePageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'solo',
-    loadChildren: () => import('./solo/solo.module').then( m => m.SoloPageModule)
+    loadChildren: () => import('./solo/solo.module').then( m => m.SoloPageModule),
+    canActivate: [AuthGuard]
   },
   {
     path: 'maps',

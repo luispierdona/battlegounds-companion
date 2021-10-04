@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { PhotoViewer } from '@ionic-native/photo-viewer/ngx';
+import { AuthGuard } from './_guards';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +21,7 @@ import { PhotoViewer } from '@ionic-native/photo-viewer/ngx';
   ],
   providers: [
     PhotoViewer,
+    AuthGuard,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent],
