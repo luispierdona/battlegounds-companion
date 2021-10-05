@@ -13,143 +13,141 @@
 </ion-header>
 
 <ion-content padding>
-  <div class="oneColorBack">
 
-    <!-- FFP -->
-    <ion-grid *ngIf="!isToggled">
+  <!-- FFP -->
+  <ion-grid *ngIf="!isToggled">
 
-      <!-- SOLO -->
-      <ion-row>
-        <ion-col size="12">
-          <ion-toolbar class="ion-text-center" color="secondary">
-            <ion-title>{{ 'SOLO LIFETIME STATS' }}</ion-title>
-          </ion-toolbar>
-        </ion-col>
-        <ion-col size="6">
-          <p><b>WINS: </b>{{ statsSoloFFP?.wins }}</p>
-          <p><b>RoundsPlayed: </b>{{ statsSoloFFP?.roundsPlayed }}</p>
-          <p><b>HeadshotKills: </b>{{ statsSoloFFP?.headshotKills }}</p>
-          <p><b>LongestKill: </b>{{ statsSoloFFP?.longestKill }}</p>
-        </ion-col>
-        <ion-col size="6">
-          <p><b>Heals: </b>{{ statsSoloFFP?.heals }}</p>
-          <p><b>Boosts: </b>{{ statsSoloFFP?.boosts }}</p>
-          <p><b>RoundMostKills: </b>{{ statsSoloFFP?.roundMostKills }}</p>
-          <p><b>Top10: </b>{{ statsSoloFFP?.top10s }}</p>
-        </ion-col>
-      </ion-row>
+    <!-- SOLO -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-toolbar class="ion-text-center" color="secondary">
+          <ion-title>{{ 'SOLO LIFETIME STATS' }}</ion-title>
+        </ion-toolbar>
+      </ion-col>
+      <ion-col size="6">
+        <p><b>WINS: </b>{{ statsSoloFFP?.wins }}</p>
+        <p><b>RoundsPlayed: </b>{{ statsSoloFFP?.roundsPlayed }}</p>
+        <p><b>HeadshotKills: </b>{{ statsSoloFFP?.headshotKills }}</p>
+        <p><b>LongestKill: </b>{{ statsSoloFFP?.longestKill }}</p>
+      </ion-col>
+      <ion-col size="6">
+        <p><b>Heals: </b>{{ statsSoloFFP?.heals }}</p>
+        <p><b>Boosts: </b>{{ statsSoloFFP?.boosts }}</p>
+        <p><b>RoundMostKills: </b>{{ statsSoloFFP?.roundMostKills }}</p>
+        <p><b>Top10: </b>{{ statsSoloFFP?.top10s }}</p>
+      </ion-col>
+    </ion-row>
 
-      <!-- DUO -->
-      <ion-row>
-        <ion-col size="12">
-          <ion-toolbar class="ion-text-center" color="secondary">
-            <ion-title>{{ 'DUO LIFETIME STATS' }}</ion-title>
-          </ion-toolbar>
-        </ion-col>
-        <ion-col size="6">
-          <p><b>WINS: </b>{{ statsDuoFFP?.wins }}</p>
-          <p><b>RoundsPlayed: </b>{{ statsDuoFFP?.roundsPlayed }}</p>
-          <p><b>HeadshotKills: </b>{{ statsDuoFFP?.headshotKills }}</p>
-          <p><b>LongestKill: </b>{{ statsDuoFFP?.longestKill }}</p>
-        </ion-col>
-        <ion-col size="6">
-          <p><b>Heals: </b>{{ statsDuoFFP?.heals }}</p>
-          <p><b>Boosts: </b>{{ statsDuoFFP?.boosts }}</p>
-          <p><b>RoundMostKills: </b>{{ statsDuoFFP?.roundMostKills }}</p>
-          <p><b>Top10: </b>{{ statsDuoFFP?.top10s }}</p>
-        </ion-col>
-      </ion-row>
+    <!-- DUO -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-toolbar class="ion-text-center" color="secondary">
+          <ion-title>{{ 'DUO LIFETIME STATS' }}</ion-title>
+        </ion-toolbar>
+      </ion-col>
+      <ion-col size="6">
+        <p><b>WINS: </b>{{ statsDuoFFP?.wins }}</p>
+        <p><b>RoundsPlayed: </b>{{ statsDuoFFP?.roundsPlayed }}</p>
+        <p><b>HeadshotKills: </b>{{ statsDuoFFP?.headshotKills }}</p>
+        <p><b>LongestKill: </b>{{ statsDuoFFP?.longestKill }}</p>
+      </ion-col>
+      <ion-col size="6">
+        <p><b>Heals: </b>{{ statsDuoFFP?.heals }}</p>
+        <p><b>Boosts: </b>{{ statsDuoFFP?.boosts }}</p>
+        <p><b>RoundMostKills: </b>{{ statsDuoFFP?.roundMostKills }}</p>
+        <p><b>Top10: </b>{{ statsDuoFFP?.top10s }}</p>
+      </ion-col>
+    </ion-row>
 
-      <!-- SQUAD -->
-      <ion-row>
-        <ion-col size="12">
-          <ion-toolbar class="ion-text-center" color="secondary">
-            <ion-title>{{ 'SQUAD LIFETIME STATS' }}</ion-title>
-          </ion-toolbar>
-        </ion-col>
-        <ion-col size="6">
-          <p><b>WINS: </b>{{ statsSquadFFP?.wins }}</p>
-          <p><b>RoundsPlayed: </b>{{ statsSquadFFP?.roundsPlayed }}</p>
-          <p><b>HeadshotKills: </b>{{ statsSquadFFP?.headshotKills }}</p>
-          <p><b>LongestKill: </b>{{ statsSquadFFP?.longestKill }}</p>
-        </ion-col>
-        <ion-col size="6">
-          <p><b>Heals: </b>{{ statsSquadFFP?.heals }}</p>
-          <p><b>Boosts: </b>{{ statsSquadFFP?.boosts }}</p>
-          <p><b>RoundMostKills: </b>{{ statsSquadFFP?.roundMostKills }}</p>
-          <p><b>Top10: </b>{{ statsSquadFFP?.top10s }}</p>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+    <!-- SQUAD -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-toolbar class="ion-text-center" color="secondary">
+          <ion-title>{{ 'SQUAD LIFETIME STATS' }}</ion-title>
+        </ion-toolbar>
+      </ion-col>
+      <ion-col size="6">
+        <p><b>WINS: </b>{{ statsSquadFFP?.wins }}</p>
+        <p><b>RoundsPlayed: </b>{{ statsSquadFFP?.roundsPlayed }}</p>
+        <p><b>HeadshotKills: </b>{{ statsSquadFFP?.headshotKills }}</p>
+        <p><b>LongestKill: </b>{{ statsSquadFFP?.longestKill }}</p>
+      </ion-col>
+      <ion-col size="6">
+        <p><b>Heals: </b>{{ statsSquadFFP?.heals }}</p>
+        <p><b>Boosts: </b>{{ statsSquadFFP?.boosts }}</p>
+        <p><b>RoundMostKills: </b>{{ statsSquadFFP?.roundMostKills }}</p>
+        <p><b>Top10: </b>{{ statsSquadFFP?.top10s }}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-    <!-- TTP -->
-    <ion-grid *ngIf="isToggled">
+  <!-- TTP -->
+  <ion-grid *ngIf="isToggled">
 
-      <!-- SOLO -->
-      <ion-row>
-        <ion-col size="12">
-          <ion-toolbar class="ion-text-center" color="tertiary">
-            <ion-title>{{ 'SOLO LIFETIME STATS' }}</ion-title>
-          </ion-toolbar>
-        </ion-col>
-        <ion-col size="6">
-          <p><b>WINS: </b>{{ statsSoloTTP?.wins }}</p>
-          <p><b>RoundsPlayed: </b>{{ statsSoloTTP?.roundsPlayed }}</p>
-          <p><b>HeadshotKills: </b>{{ statsSoloTTP?.headshotKills }}</p>
-          <p><b>LongestKill: </b>{{ statsSoloTTP?.longestKill }}</p>
-        </ion-col>
-        <ion-col size="6">
-          <p><b>Heals: </b>{{ statsSoloTTP?.heals }}</p>
-          <p><b>Boosts: </b>{{ statsSoloTTP?.boosts }}</p>
-          <p><b>RoundMostKills: </b>{{ statsSoloTTP?.roundMostKills }}</p>
-          <p><b>Top10: </b>{{ statsSoloTTP?.top10s }}</p>
-        </ion-col>
-      </ion-row>
+    <!-- SOLO -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-toolbar class="ion-text-center" color="tertiary">
+          <ion-title>{{ 'SOLO LIFETIME STATS' }}</ion-title>
+        </ion-toolbar>
+      </ion-col>
+      <ion-col size="6">
+        <p><b>WINS: </b>{{ statsSoloTTP?.wins }}</p>
+        <p><b>RoundsPlayed: </b>{{ statsSoloTTP?.roundsPlayed }}</p>
+        <p><b>HeadshotKills: </b>{{ statsSoloTTP?.headshotKills }}</p>
+        <p><b>LongestKill: </b>{{ statsSoloTTP?.longestKill }}</p>
+      </ion-col>
+      <ion-col size="6">
+        <p><b>Heals: </b>{{ statsSoloTTP?.heals }}</p>
+        <p><b>Boosts: </b>{{ statsSoloTTP?.boosts }}</p>
+        <p><b>RoundMostKills: </b>{{ statsSoloTTP?.roundMostKills }}</p>
+        <p><b>Top10: </b>{{ statsSoloTTP?.top10s }}</p>
+      </ion-col>
+    </ion-row>
 
-      <!-- DUO -->
-      <ion-row>
-        <ion-col size="12">
-          <ion-toolbar class="ion-text-center" color="tertiary">
-            <ion-title>{{ 'DUO LIFETIME STATS' }}</ion-title>
-          </ion-toolbar>
-        </ion-col>
-        <ion-col size="6">
-          <p><b>WINS: </b>{{ statsDuoTTP?.wins }}</p>
-          <p><b>RoundsPlayed: </b>{{ statsDuoTTP?.roundsPlayed }}</p>
-          <p><b>HeadshotKills: </b>{{ statsDuoTTP?.headshotKills }}</p>
-          <p><b>LongestKill: </b>{{ statsDuoTTP?.longestKill }}</p>
-        </ion-col>
-        <ion-col size="6">
-          <p><b>Heals: </b>{{ statsDuoTTP?.heals }}</p>
-          <p><b>Boosts: </b>{{ statsDuoTTP?.boosts }}</p>
-          <p><b>RoundMostKills: </b>{{ statsDuoTTP?.roundMostKills }}</p>
-          <p><b>Top10: </b>{{ statsDuoTTP?.top10s }}</p>
-        </ion-col>
-      </ion-row>
+    <!-- DUO -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-toolbar class="ion-text-center" color="tertiary">
+          <ion-title>{{ 'DUO LIFETIME STATS' }}</ion-title>
+        </ion-toolbar>
+      </ion-col>
+      <ion-col size="6">
+        <p><b>WINS: </b>{{ statsDuoTTP?.wins }}</p>
+        <p><b>RoundsPlayed: </b>{{ statsDuoTTP?.roundsPlayed }}</p>
+        <p><b>HeadshotKills: </b>{{ statsDuoTTP?.headshotKills }}</p>
+        <p><b>LongestKill: </b>{{ statsDuoTTP?.longestKill }}</p>
+      </ion-col>
+      <ion-col size="6">
+        <p><b>Heals: </b>{{ statsDuoTTP?.heals }}</p>
+        <p><b>Boosts: </b>{{ statsDuoTTP?.boosts }}</p>
+        <p><b>RoundMostKills: </b>{{ statsDuoTTP?.roundMostKills }}</p>
+        <p><b>Top10: </b>{{ statsDuoTTP?.top10s }}</p>
+      </ion-col>
+    </ion-row>
 
-      <!-- SQUAD -->
-      <ion-row>
-        <ion-col size="12">
-          <ion-toolbar class="ion-text-center" color="tertiary">
-            <ion-title>{{ 'SQUAD LIFETIME STATS' }}</ion-title>
-          </ion-toolbar>
-        </ion-col>
-        <ion-col size="6">
-          <p><b>WINS: </b>{{ statsSquadTTP?.wins }}</p>
-          <p><b>RoundsPlayed: </b>{{ statsSquadTTP?.roundsPlayed }}</p>
-          <p><b>HeadshotKills: </b>{{ statsSquadTTP?.headshotKills }}</p>
-          <p><b>LongestKill: </b>{{ statsSquadTTP?.longestKill }}</p>
-        </ion-col>
-        <ion-col size="6">
-          <p><b>Heals: </b>{{ statsSquadTTP?.heals }}</p>
-          <p><b>Boosts: </b>{{ statsSquadTTP?.boosts }}</p>
-          <p><b>RoundMostKills: </b>{{ statsSquadTTP?.roundMostKills }}</p>
-          <p><b>Top10: </b>{{ statsSquadTTP?.top10s }}</p>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+    <!-- SQUAD -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-toolbar class="ion-text-center" color="tertiary">
+          <ion-title>{{ 'SQUAD LIFETIME STATS' }}</ion-title>
+        </ion-toolbar>
+      </ion-col>
+      <ion-col size="6">
+        <p><b>WINS: </b>{{ statsSquadTTP?.wins }}</p>
+        <p><b>RoundsPlayed: </b>{{ statsSquadTTP?.roundsPlayed }}</p>
+        <p><b>HeadshotKills: </b>{{ statsSquadTTP?.headshotKills }}</p>
+        <p><b>LongestKill: </b>{{ statsSquadTTP?.longestKill }}</p>
+      </ion-col>
+      <ion-col size="6">
+        <p><b>Heals: </b>{{ statsSquadTTP?.heals }}</p>
+        <p><b>Boosts: </b>{{ statsSquadTTP?.boosts }}</p>
+        <p><b>RoundMostKills: </b>{{ statsSquadTTP?.roundMostKills }}</p>
+        <p><b>Top10: </b>{{ statsSquadTTP?.top10s }}</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-  </div>
   <ion-item-divider>
   </ion-item-divider>
   <ion-button color="warning" expand="block" style="position: absolute;  width: 100%;" (click)="changeUser()">

@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { PhotoViewer } from '@ionic-native/photo-viewer/ngx';
+
+import { ModalController } from '@ionic/angular';
+import { ViewerModalComponent } from 'ngx-ionic-image-viewer';
+
 
 @Component({
   selector: 'app-maps',
@@ -8,13 +11,25 @@ import { PhotoViewer } from '@ionic-native/photo-viewer/ngx';
 })
 export class MapsPage implements OnInit {
 
-  constructor(private photoViewer: PhotoViewer) { }
+  constructor(public modalController: ModalController) { }
 
   ngOnInit() {
+
   }
 
-  showPhoto(photo: string) {
-    this.photoViewer.show('assets/maps/'+`${photo}`);
+  async openViewer(photo: string) {
+    const modal = await this.modalController.create({
+      component: ViewerModalComponent,
+      componentProps: {
+        src: './assets/maps/' + photo,
+        scheme: 'dark'
+      },
+      cssClass: 'ion-img-viewer',
+      keyboardClose: true,
+      showBackdrop: true
+    });
+
+    return await modal.present();
   }
 
 }

@@ -20,7 +20,10 @@ export class LoginPage implements OnInit {
     ) { }
 
   ngOnInit() {
-
+    const userNameStorage = localStorage.getItem('usrId');
+    if (userNameStorage && userNameStorage !== null && userNameStorage !== undefined && userNameStorage !== 'null') {
+      this.router.navigate(['lifetime']);
+    }
   }
 
   async login() {
@@ -29,28 +32,21 @@ export class LoginPage implements OnInit {
       this.presentLoading();
       // USER ID
       const userID = await this.playerService.getUserID(this.username, this.sv);
-      // this.userId = userIDProm?.data[0]?.id;
-      // console.log('🚀 userId', this.userId);
-      console.log(userID);
       localStorage.setItem('usrId', JSON.stringify(userID?.data[0]?.id));
 
       // LIFETIME STATS
       const lifetimeStats = await this.playerService.getLifeTimeStats(userID?.data[0]?.id);
-      console.log(lifetimeStats);
       localStorage.setItem('lifestimeStats', JSON.stringify(lifetimeStats));
 
       // SEASONS
       const seasons = await this.playerService.getAllSeasons(this.sv);
-      console.log(seasons);
       localStorage.setItem('allSeasons', JSON.stringify(seasons));
       const currentSeasonArray: any[] = seasons?.data;
       const currentSeason = currentSeasonArray.filter( x => x?.attributes?.isCurrentSeason === true );
-      console.log(currentSeason);
       localStorage.setItem('lastSeason', JSON.stringify(currentSeason[0]?.id));
 
       // PLAYER DATA
       const playerData = await this.playerService.getData(userID?.data[0]?.id, this.sv, currentSeason[0]?.id);
-      console.log(playerData);
       localStorage.setItem('data', JSON.stringify(playerData));
 
       this.closeLoading();
